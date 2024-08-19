@@ -1,0 +1,890 @@
+[
+  {
+    "_id": "62cc3e1601e17a1c1f47cc6f",
+    "participants": [
+      {
+        "id": "60eaec584e2875073bad1ce2",
+        "seenMsg": "6680985c95c34ff6b15a92a9",
+        "seenAt": "2024-05-10T06:12:51.361Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaec58a6da64c8a1539643",
+        "seenMsg": "6680986c5933de3c8cffbcd1",
+        "seenAt": "2024-05-28T00:28:37.660Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "66773ec76c9d4f95723ff9fc",
+        "seenAt": "2024-06-02T10:43:03.191Z",
+        "role": "admin"
+      }
+    ],
+    "lastMsg": "6680986c5933de3c8cffbcd1",
+    "type": "g",
+    "name": "Fitness Hangout",
+    "img": "https://cdn-icons-png.flaticon.com/128/3976/3976631.png",
+    "__v": 0,
+    "messages": [
+      {
+        "unread": 11
+      }
+    ],
+    "lastMsgData": [
+      {
+        "_id": "6680986c5933de3c8cffbcd1",
+        "cont": "How's it going?",
+        "user": "60eaec58a6da64c8a1539643",
+        "conv": "62cc3e1601e17a1c1f47cc6f",
+        "media": [
+          "https://images.pexels.com/photos/26754397/pexels-photo-26754397/free-photo-of-sunrise-praia-do-felix.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        ],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cc3e16653619d473290be7",
+    "participants": [
+      {
+        "id": "60ea5d510bef644160ef6928",
+        "seenMsg": "6601f1d0fcd420148748e8b1",
+        "seenAt": "2024-06-17T14:15:40.804Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "6601f1d0fcd420148748e8b1",
+        "seenAt": "2024-06-01T20:29:06.276Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaa5493f5747bd6ead72c6",
+        "seenMsg": "6600ee4fd31962eb4f8567ec",
+        "seenAt": "2024-05-14T14:15:30.425Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d51e4384dd3f1f4130d",
+        "seenMsg": "6601f1d0fcd420148748e8b1",
+        "seenAt": "2024-05-05T08:09:46.013Z"
+      }
+    ],
+    "lastMsg": "6601f1d0fcd420148748e8b1",
+    "type": "g",
+    "__v": 0,
+    "messages": [],
+    "lastMsgData": [
+      {
+        "_id": "6601f1d0fcd420148748e8b1",
+        "cont": "Hello",
+        "user": "60ea5d510bef644160ef6928",
+        "conv": "62cc3e16653619d473290be7",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cc3e16f5f5b0bec76f71c4",
+    "participants": [
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65ff944715c9ea405590b799",
+        "seenAt": "2024-06-29T23:45:41.255Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaa549829f6dc1c2347200",
+        "seenMsg": "65fbade4b283535d3f0d4f3d",
+        "seenAt": "2024-05-20T05:05:43.702Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaec582753ac484e4f3d08",
+        "seenMsg": "65fbadc6ad4a1d180e6c9a9d",
+        "seenAt": "2024-06-29T23:39:22.940Z",
+        "role": "admin"
+      }
+    ],
+    "lastMsg": "65ff944715c9ea405590b799",
+    "type": "g",
+    "img": "https://cdn-icons-png.flaticon.com/128/2933/2933116.png",
+    "__v": 0,
+    "messages": [],
+    "lastMsgData": [
+      {
+        "_id": "65ff944715c9ea405590b799",
+        "cont": "Hello",
+        "user": "60eaa549829f6dc1c2347200",
+        "conv": "62cc3e16f5f5b0bec76f71c4",
+        "react": [
+          {
+            "user": "60eaec582753ac484e4f3d08",
+            "react": "1f601"
+          }
+        ],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cc3e16bf285d86ec530779",
+    "participants": [
+      {
+        "id": "60eaa549c1c503c3e809b5ea",
+        "seenMsg": "65f31c8a9c947b5b77eff603",
+        "seenAt": "2024-05-25T13:11:38.901Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d512c8063c5ca06f40a",
+        "seenMsg": "65f5bd791a7cae6335895318",
+        "seenAt": "2024-06-02T23:16:01.774Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d5100462b433966279e",
+        "seenMsg": "65f0b20ed73ea64c1ffcec41",
+        "seenAt": "2024-05-21T02:50:49.117Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaa5496a554d4770eeced6",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-03T23:50:16.550Z"
+      },
+      {
+        "id": "60ea5d51385d5261dbcdc38e",
+        "seenMsg": "65f5bd82797029fce9cbf85b",
+        "seenAt": "2024-06-30T03:50:31.969Z"
+      },
+      {
+        "id": "60eaa5490fb9d27e05a65059",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-05-09T01:22:33.291Z"
+      },
+      {
+        "id": "60ea5d5174d00d2023bdb16c",
+        "seenMsg": "65f5bd71de133680b19196c7",
+        "seenAt": "2024-05-10T06:01:51.726Z"
+      },
+      {
+        "id": "60eaa5491c34e0f39b12f258",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-02T17:03:14.931Z"
+      },
+      {
+        "id": "60eaa54907562dbf25cf7448",
+        "seenMsg": "65f0b20a046c2d30fe1e72da",
+        "seenAt": "2024-06-27T10:04:55.431Z"
+      },
+      {
+        "id": "60eaa54994aa6acedd5b33bf",
+        "seenMsg": "65f5bd71de133680b19196c7",
+        "seenAt": "2024-06-22T01:09:11.447Z"
+      },
+      {
+        "id": "60eaa5496c053d580be34fc5",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-05-29T07:35:27.679Z"
+      },
+      {
+        "id": "60ea5d51df9284c16c2d6999",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-24T05:01:01.038Z"
+      },
+      {
+        "id": "60ea5d512e77ba328a0e04be",
+        "seenMsg": "65f0b2001301fe627639c684",
+        "seenAt": "2024-05-14T13:57:15.598Z"
+      },
+      {
+        "id": "60ea5d5113fecc16b73d0d65",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-03T12:27:07.104Z"
+      },
+      {
+        "id": "60eaec58717f2ca403bb20e4",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-01T01:39:31.885Z"
+      },
+      {
+        "id": "60eaa5495a325f30f16df799",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-05-30T13:12:43.291Z"
+      },
+      {
+        "id": "60eaa5498b1f14726defa9bc",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-02T18:28:24.248Z"
+      },
+      {
+        "id": "60ea5d51f6781d22fd0e3a2f",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-05-02T23:15:53.421Z"
+      },
+      {
+        "id": "60ea5d518c1663aac396212a",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-14T22:14:01.092Z"
+      },
+      {
+        "id": "60ea5d51f77f48cc82cadca4",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-17T03:02:32.263Z"
+      },
+      {
+        "id": "60ea5d51f577c48c4527ee74",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-12T00:46:47.482Z"
+      },
+      {
+        "id": "60eaa549eba34b8e04cdce2a",
+        "seenMsg": "65f5bd82797029fce9cbf85b",
+        "seenAt": "2024-06-12T08:25:07.187Z"
+      },
+      {
+        "id": "60ea5d51d0e5ab84abab194d",
+        "seenMsg": "65f0b2001301fe627639c684",
+        "seenAt": "2024-05-16T21:41:24.118Z"
+      },
+      {
+        "id": "60eaa54901aa135afad0f0d8",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-28T10:30:54.420Z"
+      },
+      {
+        "id": "60ea5d51cc36a6da09e8397e",
+        "seenMsg": "65f31c91e12a83aaca3c13e0",
+        "seenAt": "2024-06-14T20:03:28.447Z"
+      },
+      {
+        "id": "60ea5d51d296f3990bf24370",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-12T13:34:00.151Z"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-19T23:39:12.666Z"
+      },
+      {
+        "id": "60eaec586f45bf828395e51e",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-27T12:57:38.063Z"
+      },
+      {
+        "id": "60eaa5495468c338c21b4751",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-05-11T04:52:09.397Z"
+      },
+      {
+        "id": "60eaec580399b3ddb7a3bb04",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-02T14:59:23.754Z"
+      },
+      {
+        "id": "60eaa549e513c56cd9f23c9a",
+        "seenMsg": "65ed89bea8e18084e18ec828",
+        "seenAt": "2024-06-04T20:22:00.443Z"
+      },
+      {
+        "id": "60eaa5499981edd907a0a077",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-05-19T19:11:48.513Z"
+      },
+      {
+        "id": "60eaa5493998e22d10bfa8b4",
+        "seenMsg": "65f5bd71de133680b19196c7",
+        "seenAt": "2024-06-06T06:43:25.920Z"
+      },
+      {
+        "id": "60eaa5495a3010e4fbb4c397",
+        "seenMsg": "65f31c83c5db3185abd05966",
+        "seenAt": "2024-05-20T21:09:09.955Z"
+      },
+      {
+        "id": "60eaa54992215aa47bb8b675",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-09T14:11:43.016Z"
+      },
+      {
+        "id": "60eaa5490975d5fe590fabd9",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-01T07:08:19.619Z"
+      },
+      {
+        "id": "60eaec58ad80e571cf47b63e",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-09T11:29:37.310Z"
+      },
+      {
+        "id": "60eaa5495cccb4f3b2a0d189",
+        "seenMsg": "65f9a88fe9e4ba7f827bc0f4",
+        "seenAt": "2024-06-16T00:52:28.679Z"
+      },
+      {
+        "id": "60eaec58db729f7c454922cf",
+        "seenMsg": "65f9a8961296fe80e98b92f5",
+        "seenAt": "2024-06-28T22:18:41.689Z"
+      }
+    ],
+    "lastMsg": "65f9a8961296fe80e98b92f5",
+    "type": "g",
+    "name": "Movie Posse",
+    "img": "https://cdn-icons-png.flaticon.com/128/2285/2285537.png",
+    "__v": 0,
+    "messages": [],
+    "lastMsgData": [
+      {
+        "_id": "65f9a8961296fe80e98b92f5",
+        "cont": "What's up",
+        "user": "60eaa5495cccb4f3b2a0d189",
+        "conv": "62cc3e16bf285d86ec530779",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cc3e1738f77c7186ba4e67",
+    "participants": [
+      {
+        "id": "60eaa5497e2232359e1db4a3",
+        "seenMsg": "65ef6a4fec841fdc7d9e850e",
+        "seenAt": "2024-06-19T09:57:53.350Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaec582bf87173d3ffdb41",
+        "seenMsg": "65e5de1143b92829f18a8426",
+        "seenAt": "2024-06-04T15:23:22.651Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65eb9cc3ee1a9573af461acb",
+        "seenAt": "2024-05-30T09:39:52.593Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaa549f2a98dc2619f40bf",
+        "seenMsg": "65ef6a489260018df1724abe",
+        "seenAt": "2024-05-28T10:22:36.584Z"
+      },
+      {
+        "id": "60eaec58090e3db9e085c040",
+        "seenMsg": "65eb9cc3ee1a9573af461acb",
+        "seenAt": "2024-05-29T21:21:33.883Z"
+      },
+      {
+        "id": "60eaa54966a4cfc04415f6ba",
+        "seenMsg": "65ef6a4fec841fdc7d9e850e",
+        "seenAt": "2024-05-14T01:50:00.104Z"
+      },
+      {
+        "id": "60eaec58e22757b6e67e6652",
+        "seenMsg": "65ef6a4fec841fdc7d9e850e",
+        "seenAt": "2024-06-09T17:48:35.508Z"
+      },
+      {
+        "id": "60eaa54939afaf80476eece9",
+        "seenMsg": "65ef6a4fec841fdc7d9e850e",
+        "seenAt": "2024-06-06T14:07:11.085Z"
+      },
+      {
+        "id": "60eaa54923e412234eaa5e7e",
+        "seenMsg": "65ef6a4fec841fdc7d9e850e",
+        "seenAt": "2024-05-03T10:33:45.789Z"
+      }
+    ],
+    "lastMsg": "65ef6a4fec841fdc7d9e850e",
+    "type": "g",
+    "name": "Movie Forum",
+    "__v": 0,
+    "messages": [
+      {
+        "unread": 5
+      }
+    ],
+    "lastMsgData": [
+      {
+        "_id": "65ef6a4fec841fdc7d9e850e",
+        "cont": "Hey",
+        "user": "60eaa5497e2232359e1db4a3",
+        "conv": "62cc3e1738f77c7186ba4e67",
+        "media": [
+          "https://images.unsplash.com/photo-1720068910279-6899141564bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+          "https://images.pexels.com/photos/13650913/pexels-photo-13650913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.unsplash.com/photo-1720037574608-d3acb83d5353?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+          "https://images.pexels.com/photos/13650913/pexels-photo-13650913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cb90d308e703822f8cecd7",
+    "participants": [
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65e2ce6b32a18627954d26a2",
+        "seenAt": "2024-05-01T12:19:30.892Z"
+      },
+      {
+        "id": "60ea5d51f5228f7570a814f1",
+        "seenMsg": "65e2ce945e11cdd5db0230ac",
+        "seenAt": "2024-06-12T04:10:40.921Z"
+      }
+    ],
+    "lastMsg": "65e2ce945e11cdd5db0230ac",
+    "__v": 0,
+    "messages": [
+      {
+        "unread": 7
+      }
+    ],
+    "lastMsgData": [
+      {
+        "_id": "65e2ce945e11cdd5db0230ac",
+        "cont": "Hmmm, Let me know if you need anything!",
+        "user": "60ea5d518c4744443c5c2719",
+        "conv": "62cb90d308e703822f8cecd7",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cb90d4772db8b4fe866c85",
+    "participants": [
+      {
+        "id": "60ea5d518bb9be9ad21b9f21",
+        "seenMsg": "65ddd7cafdd21dc4f14bf1e5",
+        "seenAt": "2024-05-13T18:32:02.933Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d51024b933aa6445412",
+        "seenMsg": "65ddd7ded08673960a4d0362",
+        "seenAt": "2024-05-22T11:58:17.630Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d51cf09de1ca568bb12",
+        "seenMsg": "65de59c4b863c97b5c1d3c50",
+        "seenAt": "2024-05-05T19:21:15.331Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d51ddd0c58d4e3c023d",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-29T12:51:16.259Z"
+      },
+      {
+        "id": "60ea5d517d2fea846228180d",
+        "seenMsg": "65ddd7d0fccfa1ed24a6127c",
+        "seenAt": "2024-05-30T14:00:10.021Z"
+      },
+      {
+        "id": "60ea5d512d63ad4069bc26ef",
+        "seenMsg": "65ddd7cafdd21dc4f14bf1e5",
+        "seenAt": "2024-06-13T11:26:18.662Z"
+      },
+      {
+        "id": "60ea5d51e55a7adc86f4feea",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-02T03:02:42.614Z"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-15T05:00:23.505Z"
+      },
+      {
+        "id": "60ea5d51d6a5dd25396cbd8f",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-21T03:14:03.578Z"
+      },
+      {
+        "id": "60ea5d51e66e95093ab57aac",
+        "seenMsg": "65ddd7a86450fda6fecb5bec",
+        "seenAt": "2024-05-17T04:56:52.028Z"
+      },
+      {
+        "id": "60ea5d51f5f2af186f753690",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-02T14:35:53.918Z"
+      },
+      {
+        "id": "60ea5d515293d36f20c238db",
+        "seenMsg": "65ddd7b800cd626e9ae6ce9f",
+        "seenAt": "2024-05-06T14:23:43.041Z"
+      },
+      {
+        "id": "60ea5d5184eec4126ffff50d",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-15T14:29:26.309Z"
+      },
+      {
+        "id": "60ea5d511db9b8e565e5459d",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-21T21:26:58.857Z"
+      },
+      {
+        "id": "60ea5d518018f0f7186b3490",
+        "seenMsg": "65de59c05f1139743ef511ed",
+        "seenAt": "2024-06-28T02:04:19.443Z"
+      },
+      {
+        "id": "60ea5d51a5261a321a984d2a",
+        "seenMsg": "65ddd7d0fccfa1ed24a6127c",
+        "seenAt": "2024-06-12T05:55:40.373Z"
+      },
+      {
+        "id": "60ea5d510f1c874aa32d13aa",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-14T12:19:14.779Z"
+      },
+      {
+        "id": "60ea5d51ccbfa8b785b72f9d",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-13T09:42:44.252Z"
+      },
+      {
+        "id": "60ea5d5109a779c09c4877bb",
+        "seenMsg": "65ddd7bbb53bc5fcebf078ac",
+        "seenAt": "2024-05-23T03:08:01.435Z"
+      },
+      {
+        "id": "60ea5d51a013c72c05b7a9f4",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-10T06:52:54.892Z"
+      },
+      {
+        "id": "60ea5d513c23df85028c05d2",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-10T17:49:39.139Z"
+      },
+      {
+        "id": "60ea5d5159f37c499c05a94b",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-24T07:25:02.233Z"
+      },
+      {
+        "id": "60ea5d516ec2871976e69b28",
+        "seenMsg": "65de5995bab602dd6831770b",
+        "seenAt": "2024-06-27T01:27:09.532Z"
+      },
+      {
+        "id": "60ea5d5113820a8b1c025ce5",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-20T01:47:37.995Z"
+      },
+      {
+        "id": "60ea5d5159796b61a620f5a4",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-31T23:16:57.715Z"
+      },
+      {
+        "id": "60ea5d519b4a18c6fef38fef",
+        "seenMsg": "65de59a62f0f4d610f932f1b",
+        "seenAt": "2024-05-01T05:53:59.812Z"
+      },
+      {
+        "id": "60ea5d512fc6187699669f1c",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-23T15:43:02.731Z"
+      },
+      {
+        "id": "60ea5d51a4318d708aa9aef5",
+        "seenMsg": "65ddd7cafdd21dc4f14bf1e5",
+        "seenAt": "2024-06-13T21:18:34.802Z"
+      },
+      {
+        "id": "60ea5d5117d1cec9cf73db12",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-06T04:05:56.499Z"
+      },
+      {
+        "id": "60ea5d511e19536ec859be50",
+        "seenMsg": "65ddd7b800cd626e9ae6ce9f",
+        "seenAt": "2024-05-28T00:00:42.411Z"
+      },
+      {
+        "id": "60ea5d51e56369922da32235",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-14T16:07:56.020Z"
+      },
+      {
+        "id": "60ea5d5137db7bbd4a3477ad",
+        "seenMsg": "65de599c0f197ece9f634642",
+        "seenAt": "2024-06-24T11:38:21.467Z"
+      },
+      {
+        "id": "60ea5d512f319a7c30ec07f1",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-07T14:17:10.247Z"
+      },
+      {
+        "id": "60ea5d51f9fbbf3bd7154e11",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-04T19:12:26.713Z"
+      },
+      {
+        "id": "60ea5d51bad0eaf9d32aac4d",
+        "seenMsg": "65ddd7acfe40088ebd3b34cd",
+        "seenAt": "2024-06-13T03:42:59.173Z"
+      },
+      {
+        "id": "60ea5d517261ed010605c253",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-15T08:57:09.510Z"
+      },
+      {
+        "id": "60ea5d513303bfde00ae8307",
+        "seenMsg": "65ddd7acfe40088ebd3b34cd",
+        "seenAt": "2024-06-04T19:51:59.339Z"
+      },
+      {
+        "id": "60ea5d510a511fa00a543edf",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-05-27T10:05:33.238Z"
+      },
+      {
+        "id": "60ea5d51f8d52cd0abf105b3",
+        "seenMsg": "65de599c0f197ece9f634642",
+        "seenAt": "2024-05-04T18:00:40.748Z"
+      },
+      {
+        "id": "60ea5d51f9fe703c47057c19",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-14T09:31:45.412Z"
+      },
+      {
+        "id": "60ea5d51a1dde02790e4175b",
+        "seenMsg": "65de5995bab602dd6831770b",
+        "seenAt": "2024-06-15T18:19:32.105Z"
+      },
+      {
+        "id": "60ea5d51e1e8f50bfc26c316",
+        "seenMsg": "65ddd7dacbc6029a0211b5f5",
+        "seenAt": "2024-05-07T06:19:45.150Z"
+      },
+      {
+        "id": "60ea5d51368775aa23738795",
+        "seenMsg": "65ddd7bf1e6b7c18cb1818e7",
+        "seenAt": "2024-06-23T23:28:16.369Z"
+      },
+      {
+        "id": "60ea5d51dbdbfbb6c56cb9a3",
+        "seenMsg": "65de59c9c0f088a29e6060d7",
+        "seenAt": "2024-06-03T05:54:19.055Z"
+      },
+      {
+        "id": "60ea5d518eedafa7d87b9d3f",
+        "seenMsg": "65ddd7b6cfbe16d3d8ba1b09",
+        "seenAt": "2024-06-17T00:22:19.050Z"
+      },
+      {
+        "id": "60ea5d510be0397359b1287e",
+        "seenMsg": "658d50c42bb16a5fa3e584d3",
+        "seenAt": "2024-06-30T18:19:17.318Z"
+      },
+      {
+        "id": "60ea5d51fc128f326682fcb2",
+        "seenMsg": "65ddd7d0fccfa1ed24a6127c",
+        "seenAt": "2024-05-16T12:03:33.333Z"
+      },
+      {
+        "id": "60ea5d51c574645aac7ac346",
+        "seenMsg": "65de59b2568495c0ff618874",
+        "seenAt": "2024-05-19T14:10:20.664Z"
+      }
+    ],
+    "lastMsg": "65de59c9c0f088a29e6060d7",
+    "type": "g",
+    "name": "Funny Squad",
+    "__v": 0,
+    "messages": [],
+    "lastMsgData": [
+      {
+        "_id": "65de59c9c0f088a29e6060d7",
+        "cont": "Hmmm",
+        "user": "60ea5d5109a779c09c4877bb",
+        "conv": "62cb90d4772db8b4fe866c85",
+        "media": [
+          "https://images.unsplash.com/photo-1720037574608-d3acb83d5353?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+          "https://images.unsplash.com/photo-1720037207455-78dab39ca372?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+          "https://images.unsplash.com/photo-1676390812659-f49f2f13c065?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+          "https://images.pexels.com/photos/13650913/pexels-photo-13650913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.unsplash.com/photo-1719922327431-b923c87b6473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+          "https://images.pexels.com/photos/415071/pexels-photo-415071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cb90d484f247fa134dcfc3",
+    "participants": [
+      {
+        "id": "60ea5d5180507d2913e098db",
+        "seenMsg": "65d46b3ffa360561fcd44c86",
+        "seenAt": "2024-06-13T13:34:58.733Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d51b33b995df8264b87",
+        "seenMsg": "65c6d113715a9f14a3005787",
+        "seenAt": "2024-06-25T15:28:38.860Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d51839afb957e55a929",
+        "seenMsg": "65ce07a32e5811a71b62201f",
+        "seenAt": "2024-06-21T08:07:23.922Z",
+        "role": "admin"
+      },
+      {
+        "id": "60ea5d5120f50fd07a22b4af",
+        "seenMsg": "65d367094ce8c4db2f0923e0",
+        "seenAt": "2024-05-24T18:37:20.850Z"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65ce079cff124cad8418e686",
+        "seenAt": "2024-06-27T23:15:42.013Z"
+      },
+      {
+        "id": "60ea5d510bfdad1ffc21b480",
+        "seenMsg": "65ce079cff124cad8418e686",
+        "seenAt": "2024-05-16T05:08:13.915Z"
+      },
+      {
+        "id": "60ea5d516c99d15b2c935965",
+        "seenMsg": "65c6d113715a9f14a3005787",
+        "seenAt": "2024-06-19T16:48:42.598Z"
+      }
+    ],
+    "lastMsg": "65d46b3ffa360561fcd44c86",
+    "type": "g",
+    "__v": 0,
+    "messages": [
+      {
+        "unread": 12
+      }
+    ],
+    "lastMsgData": [
+      {
+        "_id": "65d46b3ffa360561fcd44c86",
+        "cont": "Hello, What's your favorite thing about...?",
+        "user": "60ea5d5180507d2913e098db",
+        "conv": "62cb90d484f247fa134dcfc3",
+        "media": [
+          "https://images.unsplash.com/photo-1719922327431-b923c87b6473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+        ],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cb90d3bc9ad02925c9b920",
+    "participants": [
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65caeae9b7d6d57f983a41ca",
+        "seenAt": "2024-06-18T03:36:19.061Z"
+      },
+      {
+        "id": "60ea5d517ef59ec61ba01ef6",
+        "seenMsg": "65c21599c4ebc2350982dd7c",
+        "seenAt": "2024-06-27T08:14:40.535Z"
+      }
+    ],
+    "lastMsg": "65caeae9b7d6d57f983a41ca",
+    "__v": 0,
+    "messages": [],
+    "lastMsgData": [
+      {
+        "_id": "65caeae9b7d6d57f983a41ca",
+        "cont": "Oh guy",
+        "user": "60ea5d517ef59ec61ba01ef6",
+        "conv": "62cb90d3bc9ad02925c9b920",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "_id": "62cc3e1683e7a142230e3151",
+    "participants": [
+      {
+        "id": "60eaec58291ffed9aa83763f",
+        "seenMsg": "65c8ea5ad811b5f2e56768b1",
+        "seenAt": "2024-06-29T15:12:26.351Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaa54969f8e6391a41cef7",
+        "seenMsg": "65c8ea3c223b312a0af011f5",
+        "seenAt": "2024-06-13T03:55:33.581Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaa549bedf1e57d010eb27",
+        "seenMsg": "65c8ea5ad811b5f2e56768b1",
+        "seenAt": "2024-06-16T06:55:55.052Z",
+        "role": "admin"
+      },
+      {
+        "id": "60eaec58655a1c5b26139d86",
+        "seenMsg": "65c8ea5ad811b5f2e56768b1",
+        "seenAt": "2024-06-15T22:26:11.312Z"
+      },
+      {
+        "id": "60eaa549f2a98dc2619f40bf",
+        "seenMsg": "65c8ea5ad811b5f2e56768b1",
+        "seenAt": "2024-05-28T22:38:52.346Z"
+      },
+      {
+        "id": "60eaec58090e3db9e085c040",
+        "seenMsg": "65c8ea30d61cb8ec248249d3",
+        "seenAt": "2024-05-11T11:21:57.626Z"
+      },
+      {
+        "id": "60eaec589e0e5f04511db911",
+        "seenMsg": "65c8ea5ad811b5f2e56768b1",
+        "seenAt": "2024-06-16T08:37:03.732Z"
+      },
+      {
+        "id": "60eaec58bfcc1dfedb8ff104",
+        "seenMsg": "65c28e75c794e70fa8bf7f8b",
+        "seenAt": "2024-06-13T10:19:46.244Z"
+      },
+      {
+        "id": "60ea5d518c4744443c5c2719",
+        "seenMsg": "65c8ea5ad811b5f2e56768b1",
+        "seenAt": "2024-05-16T00:16:57.060Z"
+      },
+      {
+        "id": "60eaa54933ba90b66f354027",
+        "seenMsg": "65c4820a43553d56c3d4611b",
+        "seenAt": "2024-05-09T17:01:06.430Z"
+      }
+    ],
+    "lastMsg": "65c8ea5ad811b5f2e56768b1",
+    "type": "g",
+    "name": "Music Squad",
+    "__v": 0,
+    "messages": [],
+    "lastMsgData": [
+      {
+        "_id": "65c8ea5ad811b5f2e56768b1",
+        "cont": "What's up",
+        "user": "60eaa549bedf1e57d010eb27",
+        "conv": "62cc3e1683e7a142230e3151",
+        "react": [],
+        "__v": 0
+      }
+    ]
+  }
+]
