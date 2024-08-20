@@ -1,14 +1,12 @@
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable } from '@nestjs/common';
-import { jwtConstants } from '../constants';
 import { Request } from 'express';
 
 const JWTFromCookieExtractor = function(req:Request) {
   let token = null;
   const cookies = req?.headers?.cookie
   token = getJwtFromCookie(cookies);
-  console.log('get jwt from token:',token);
   return token;
 };
 
@@ -24,10 +22,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     super({
       jwtFromRequest: JWTFromCookieExtractor,
       ignoreExpiration: false,
-      secretOrKey: jwtConstants.secret,
+      secretOrKey: process.env.JWT_SECRET,
     });
   }
-
 
   async validate(payload) {
     return { userId: payload.uid };

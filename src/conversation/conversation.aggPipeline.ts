@@ -118,7 +118,8 @@ export const getConvWithLastMsg_AggPl_v4 = ({address,userId}:{address:string|str
       }, 
       'type': undefined
     }:{
-      '_id': new ObjectId(address)
+      '_id': new ObjectId(address),
+      'participants.id': new ObjectId(userId)
     }
   }, {
     '$lookup': {

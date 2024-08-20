@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { SendMessageInput } from './dto/send-message.input';
 import { UpdateMessageInput } from './dto/update-message.input';
 import { Types } from 'mongoose';
@@ -27,8 +27,9 @@ export class MessageService {
         else throw new Error('error get or create conv');
       } else throw new Error(`invalid input, targetUId = ${targetUserId}`)
     }
+    const checkValid = await this.conversationService.checkUserInConv({convId:input.conv,userId:msg.user});
+    if(!checkValid) throw new HttpException('user not exist in conv',HttpStatus.UNAUTHORIZED);
     const newMsg = {...input,user:new ObjectId(input.user),conv:new ObjectId(input.conv),repMsg: input.repMsg?new ObjectId(input.repMsg):undefined}
-
     const msgInsertRes = await this.messageModel.insertMany(newMsg);
     const insertedMsg = msgInsertRes[0];
     const updateConvRes = await this.conversationService.updateNewMsg(
@@ -53,6 +54,10 @@ export class MessageService {
   async update(input: UpdateMessageInput):Promise<boolean> {
     if(input.type=='react') {
       const {user,react,msgId} = input.data;
+      
+      const checkValid = await this.conversationService.checkUserInConv({convId:input.data.convId,userId:user});
+      if(!checkValid) throw new HttpException('user not exist in conv',HttpStatus.UNAUTHORIZED);
+
       const res = await this.messageModel.updateOne(
         {_id: new Types.ObjectId(msgId)},
         {
@@ -70,6 +75,7 @@ export class MessageService {
       return res2.acknowledged;
     }
     else if(input.type=='unsend') {
+      
       const {convId,userId,msgId} = input.data;
       const res = await this.messageModel.replaceOne(
         {_id: new Types.ObjectId(msgId),conv:new Types.ObjectId(convId), user:new Types.ObjectId(userId)},
@@ -79,6 +85,10 @@ export class MessageService {
     }
     else if(input.type=='hide') {
       const {convId,userId,msgId} = input.data;
+      
+      const checkValid = await this.conversationService.checkUserInConv({convId,userId});
+      if(!checkValid) throw new HttpException('user not exist in conv',HttpStatus.UNAUTHORIZED);
+
       const res = await this.messageModel.updateOne(
         {_id: new Types.ObjectId(msgId),conv:new Types.ObjectId(convId)},
         {

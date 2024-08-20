@@ -10,7 +10,6 @@ import { ConversationModule } from './conversation/conversation.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthService } from './auth/auth.service';
 import { JwtModule } from '@nestjs/jwt';
-import { jwtConstants } from './auth/constants';
 import { ThrottlerModule } from '@nestjs/throttler';
 
 
@@ -18,10 +17,11 @@ import { ThrottlerModule } from '@nestjs/throttler';
   imports: [UsersModule, MessageModule, ConversationModule, 
     SocketModule, ConfigModule.forRoot(), 
     JwtModule.register({
-      secret: jwtConstants.secret,
+      secret: process.env.JWT_SECRET,
       signOptions: { expiresIn: '3600s' },
+      global:true,
     }),
-    MongooseModule.forRoot('mongodb://localhost/nest',{dbName:'chat_app_july2024'}),
+    MongooseModule.forRoot(process.env.DB_URI,{dbName:process.env.DB_NAME}),
     AuthModule,
     ThrottlerModule.forRoot([{
       ttl: 60000,

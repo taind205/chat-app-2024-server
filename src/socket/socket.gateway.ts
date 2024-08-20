@@ -5,17 +5,24 @@ import { MessageService } from "src/message/message.service";
 import { UsersService } from "src/users/users.service";
 import { FirebaseService } from "../firebase/firebase.service";
 import { ClientData_HideMsg, ClientData_ReactMsg, ClientData_SeeMsg, ClientData_SendMsg, ClientData_UnsendMsg, ClientToServerEvents, InterServerEvents, ServerToClientEvents, SocketData, SocketEvent, UpdateConversationInput, UpdateParticipantInput } from "./socket.type";
-import { HttpException, HttpStatus, UseGuards } from "@nestjs/common";
+import { HttpException, HttpStatus, Inject, UseGuards } from "@nestjs/common";
 import { getJwtFromCookie } from "src/auth/strategy/jwt.strategy";
 import { JwtService } from "@nestjs/jwt";
 import { UpdateUserInput } from "src/users/dto/update-user.input";
 import { ActionMessage } from "src/message/entities/message.entity";
+import * as dotenv from 'dotenv';
 
-@WebSocketGateway({ 
-   cors: {
-    origin: process.env.CLIENT_DOMAIN,
+const getClientDomain = () => {
+  dotenv.config();
+  return process.env.CLIENT_DOMAIN
+}
+
+@WebSocketGateway({
+  cors: {
+    origin: getClientDomain(),
     credentials: true,
-  },})
+  },
+})
 
 export class ChatGateway implements OnGatewayInit {
   constructor(
@@ -23,8 +30,7 @@ export class ChatGateway implements OnGatewayInit {
     private usersService: UsersService,
     private conversationService: ConversationService,
     private messageService: MessageService,
-    private jwtService: JwtService,
-    
+    private jwtService: JwtService
   ) {
     // Update online status for all user every 20 seconds
     setInterval(async () => { 
@@ -77,7 +83,7 @@ export class ChatGateway implements OnGatewayInit {
     ): Promise<WsResponse<unknown>> {
         
         let {msg:input,targetId} = data
-        if(!input.cont && (!input.imgFiles || input.imgFiles.length==0) ) return { event:"actStt", data:"invalidInput" };
+        if((!input.cont || !input.cont.trim()) && (!input.imgFiles || input.imgFiles.length==0) ) return { event:"actStt", data:"invalidInput" };
         try{
           const userId = client['uid'];
           if(userId!=input.user) throw new Error('unauthorized msg sent')
@@ -324,7 +330,6 @@ export class ChatGateway implements OnGatewayInit {
       const userId = client['uid'];
         try{
           const {convId,targetUserId} = data;
-          console.log('handleRemovePtcp, data:',data);
           const updateRes = await this.conversationService.removeParticipant({convId,userId,targetUserId});
           if(!updateRes) throw new Error('update failed');
           const newMsg = await this.messageService.addActionMessage(

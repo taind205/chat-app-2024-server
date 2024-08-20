@@ -22,6 +22,13 @@ export class AuthController {
     'postmessage'
   )
 
+  private cookieOptions = {
+    httpOnly: true,
+    secure: true, // Set secure to true for HTTPS
+    maxAge: 3600000,
+    sameSite: "none" as "none",
+  }
+
   @Public()
   @Post('google/callback')
   async googleCallback(@Body() { code }: { code: string }, @Res({ passthrough: true }) res:ExpressResponse) {
@@ -42,11 +49,7 @@ export class AuthController {
 
     // Generate an authentication token
     const {access_token} = await this.authService.login(appUser);
-    res.cookie('jwt', access_token, {
-      httpOnly: true,
-      secure: true, // Set secure to true for HTTPS
-      maxAge: 3600000,
-    });
+    res.cookie('jwt', access_token, this.cookieOptions);
     return {user:appUser}
   }
   
@@ -55,17 +58,13 @@ export class AuthController {
   @Post('login')
   async login(@Request() req, @Res({ passthrough: true }) res:ExpressResponse) {
     const {access_token,user} = await this.authService.login(req.user);
-    res.cookie('jwt', access_token, {
-      httpOnly: true,
-      secure: true, // Set secure to true for HTTPS
-      maxAge: 3600000,
-    });
+    res.cookie('jwt', access_token, this.cookieOptions);
     return {user}
   }
 
   @Post('logout')
   async logout(@Request() req, @Res({ passthrough: true }) res:ExpressResponse) {
-    res.clearCookie('jwt');
+    res.cookie('jwt',"0",this.cookieOptions); //Clear cookie require sameSite="none" too
     return {logout:true}
   }
 

@@ -65,10 +65,8 @@ export class FirebaseService {
 
         blobStream.on('finish', async () => {
           const url = await blob.makePublic();
-          console.log(url);
           // Return the download URL or other response
           imgLinks.push(blob.publicUrl());
-          console.log(imgLinks);
           if(imgLinks.length==fileBuffers.length) {
             resolve(imgLinks);  
           }

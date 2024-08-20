@@ -79,7 +79,6 @@ export class ConversationService {
         const newConvLMP = loadedConv.at(-1).lastMsg.toString();
         // Fetch 20 new conv
         loadedConv = await fetchConv({type:'nor',num:20,convLMP: newConvLMP});
-        console.log('fetch more: ',loadedConv.length);
         if(loadedConv.length==0) return {data:[],pos:[newConvLMP,absLMP]};
         checkFetchRes = checkFetch();
       }
@@ -96,13 +95,11 @@ export class ConversationService {
     const checkLMP = loadedConv.findIndex(v=>v.lastMsgData && v.lastMsgData._id.getTimestamp()<oldestLastMsgIdx);
     
     if(checkLMP==-1) { // all conv have the correct last msg index
-      console.log('fetch normal ',loadedConv.length)
       outputConvLMP = loadedConv.at(-1).lastMsg.toString();
       outputAbsLMP = outputConvLMP;
       return {data:loadedConv,pos:[outputConvLMP,outputAbsLMP]};
     } else if(Number.isInteger(checkLMP)) {
       const absConv:Conversation[] = await fetchConv({type:'abs',convLMP,absLMP});
-      console.log('fetch abs ',absConv.length);
       if(absConv.length==0) return {data:[],pos:[convLMP,absLMP]};
 
       outputAbsLMP = absConv.at(-1).lastMsgData._id.toString();
@@ -120,7 +117,6 @@ export class ConversationService {
 
   async getOne({userId,address}:{userId:string,address: string|string[]}):Promise<GetConv_Response> {
     if(!address[0]) return {msgCode:"input-err"};
-    console.log(address);
     
     const convData:DetailConversation[] = await this.conversationModel.aggregate(getConvWithLastMsg_AggPl_v4({userId,address}));
     if(!convData[0]) return {msgCode:"new"};
@@ -130,17 +126,25 @@ export class ConversationService {
     return {conv:{...convData[0]}};
   }
 
+  async checkUserInConv({userId,convId}:{userId:string,convId: string}):Promise<boolean> {
+    const userOid = new Types.ObjectId(userId);
+    const convOid = new Types.ObjectId(convId);
+  
+    const convData= await this.conversationModel.findOne({_id:convOid,"participants.id":userOid},
+      {_id:1});
+    if(convData._id.equals(convOid)) return true;
+    else return false;
+  }
+
   async getOrCreate(input:GetOrCreateConversationInput):Promise<{id:string}>{
     const {userIds,message} = input;
     const userOIds = userIds.map(v=>new Types.ObjectId(v));
     if(userIds.length==2 && message) {
       const conv = await this.conversationModel.findOne( //check if exist and get it or create new
         {"participants.id":{$all:[userOIds[0],userOIds[1]] }, type:undefined })
-        console.log('get conv for 2 user:',conv)
         if(!conv?.id) {
           const newConv = await this.conversationModel.create( 
             { "participants":[{id:userOIds[0]},{id:userOIds[1]}] })
-            console.log('create conv for 2 user:',newConv);
             return {id:newConv._id.toString()};
         } else {
         return({id:conv.id})
@@ -155,7 +159,6 @@ export class ConversationService {
     if(userOIds.length>2) {
       const newConv = await this.conversationModel.create(
         { "participants":userOIds.map(userOid=>({id:userOid, role:'admin'})), type:'g' })
-        console.log('create gr chat:',newConv);
         if(newConv) return newConv;
         else throw new Error('error while create new conv');
       }
@@ -236,7 +239,6 @@ export class ConversationService {
         { _id: convOid},
         { $set: updateQuery},
         {returnDocument:"after",projection:{_id:1,img:1,name:1}});
-      console.log('auth update conv res:',updateRes);
       if(updateRes) return updateRes;
       else throw new Error('No update res');
     } else throw new HttpException("User isn't admin",HttpStatus.FORBIDDEN);
@@ -257,7 +259,6 @@ export class ConversationService {
         updateQuery = {"participants.$.role":updateInput.role}
         // set role require admin role
         const getAdminRole:{participants:Participant}[]  = await this.conversationModel.aggregate(getConvAdminRole_Pipeline({userOid,convOid}));
-        console.log('auth get admin role: ',getAdminRole);
         if(getAdminRole[0]?.participants?.id.equals(userOid)) isValid=true; 
       }
       else if(updateInput.nickname) {
