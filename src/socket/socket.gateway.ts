@@ -51,11 +51,10 @@ export class ChatGateway implements OnGatewayInit {
     afterInit(server:Server){
       server.use(async (socket,next)=>
       {
-        const cookiesString = socket.handshake.headers.cookie;
-        const jwt = getJwtFromCookie(cookiesString);
-        const payload:{uid:string} = this.jwtService.verify(jwt)
-        const uid = payload.uid;
         try {
+          const jwt = socket.handshake.auth['token'];
+          const payload:{uid:string} = this.jwtService.verify(jwt)
+          const uid = payload.uid;
           socket['uid']=String(uid);
           this.usersService.updateOnlineStatus(String(uid));
           this.connectedUsers.add(uid);

@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query, Request } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query, Request, UnauthorizedException } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiProperty, ApiTags, ApiBody } from '@nestjs/swagger';
 import { UsersService } from './users.service';
 import { UserObjType } from './entities/user.entity';
@@ -42,11 +42,13 @@ export class UsersController {
     return {users: await this.usersService.getSampleUser()};
   }
 
-  @Get('get-signed-in-user')
+  @Post('get-signed-in-user')
     @ApiOperation({ summary: 'Get signed in user' })
     @ApiResponse({ status: 200, description: 'OK', type: UserObjType })
-    async getSignedInUser(@Request() req) {
-    return await this.usersService.findOne(req['user'].userId);
+    async getSignedInUser(@Request() req, @Body() body:{key:string}) {
+      if(body.key!=process.env.API_KEY) throw new UnauthorizedException();
+      const {user} = req;
+      return await this.usersService.findOne(user.userId);
   }
 
 }

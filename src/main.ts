@@ -26,6 +26,6 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   await app.listen(process.env.PORT);
-  console.log('Ver1.01');
+  console.log('Ver1.03');
 }
 bootstrap();

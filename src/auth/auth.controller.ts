@@ -1,13 +1,11 @@
-import { Controller,Request, Get, Post, Req, UseGuards, Res, Body } from '@nestjs/common';
+import { Controller,Request, Get, Post, Req, UseGuards, Res, Body, UnauthorizedException } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Public } from './decorator';
-import { LocalAuthGuard } from './guard/local-auth.guard';
 import { JwtAuthGuard } from './guard/jwt-auth.guard';
 import { Response as ExpressResponse } from 'express';
 import { OAuth2Client } from 'google-auth-library';
 import { UserObjType } from 'src/users/entities/user.entity';
 import { UsersService } from 'src/users/users.service';
-
 
 @Controller('auth')
 export class AuthController {
@@ -31,7 +29,9 @@ export class AuthController {
 
   @Public()
   @Post('google/callback')
-  async googleCallback(@Body() { code }: { code: string }, @Res({ passthrough: true }) res:ExpressResponse) {
+  async googleCallback(@Body() { code, key }: { code: string, key:string }, @Res({ passthrough: true }) res:ExpressResponse) {
+    if(key!=process.env.API_KEY) throw new UnauthorizedException();
+
     const { tokens } = await this.oauth2Client.getToken(code);
     this.oauth2Client.setCredentials(tokens);
 
@@ -49,22 +49,28 @@ export class AuthController {
 
     // Generate an authentication token
     const {access_token} = await this.authService.login(appUser);
-    res.cookie('jwt', access_token, this.cookieOptions);
-    return {user:appUser}
+    return {user:appUser,jwt:access_token};
   }
   
   @Public()
-  @UseGuards(LocalAuthGuard)
   @Post('login')
-  async login(@Request() req, @Res({ passthrough: true }) res:ExpressResponse) {
-    const {access_token,user} = await this.authService.login(req.user);
-    res.cookie('jwt', access_token, this.cookieOptions);
-    return {user}
+  async login(@Body() loginDto: {uid:string,password:string,key:string}, @Request() req,
+    @Res({ passthrough: true }) res:ExpressResponse) {
+    if(loginDto.key!=process.env.API_KEY) throw new UnauthorizedException();
+
+    const authUser = await this.authService.validateUser(loginDto.uid, loginDto.password);
+    if (!authUser) {
+      throw new UnauthorizedException();
+    }
+    
+    const {access_token,user} = await this.authService.login(authUser);
+    
+    return {user, jwt:access_token};
   }
 
   @Post('logout')
   async logout(@Request() req, @Res({ passthrough: true }) res:ExpressResponse) {
-    res.cookie('jwt',"0",this.cookieOptions); //Clear cookie require sameSite="none" too
+    res.cookie('jwt',undefined,this.cookieOptions); //Clear cookie require sameSite="none" too
     return {logout:true}
   }
 
